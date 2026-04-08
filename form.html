@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de contacto</title>
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+
+<form accept="action">
+  <fieldset>
+    <legend>Datos personales</legend>
+    <label for="nombre-completo">Nombre completo:</label>
+    <input type="text" id="nombre-completo" name="nombre-completo" placeholder="Nombre completo">
+    <label for="email">Correo electronico</label>
+    <input type="email" id="email" name="email" placeholder="Correo electronico">
+    <label for="telefono">Numero de telefono</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="+34 600 123 456" required>
+    <label for="checkbox">Marca la casilla si quieres ser llamado</label>
+    <input type="checkbox" id="checkbox" name="checkbox">
+    <label for="opcion">Selecciona hora del dia</label>
+    <select id="opcion" name="opcion">
+      <option>10 AM</option>
+      <option>11 AM</option>
+      <option>12 AM</option>
+      <option>13 PM</option>
+      <option>14 PM</option>
+      <option>15 PM</option>
+      <option>16 PM</option>
+      <option>17 PM</option>
+      <option>18 PM</option>
+      <option>19 PM</option>
+      <option>20 PM</option>
+      <option>21 PM</option>
+    </select>
+    <label for="comentarios">Comentarios</label>
+    <textarea id="comentarios" name="comentarios" placeholder="Dejame aqui tu comentario"></textarea>
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar</button>
+  </fieldset>
+</form>
+
+</body>
+</html>

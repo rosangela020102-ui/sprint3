@@ -1,0 +1,209 @@
+/* Importacion de fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* Variables globales */
+:root {
+  /* Colores */
+  --primary: #DB4289;        
+  --secondary: #3539DC;      
+  --accent: #A442DB;        
+  --highlight: #7142DB;      
+  --success: #BE8BDB; 
+
+  /* Colores neutros */
+  --dark: #1a1a1a;
+  --grey-dark: #34495e;
+  --grey: #7f8c8d;
+  --grey-light: #ecf0f1;
+  --light: #f8f9fa;
+  --white: #ffffff;
+
+  /* Tipografia */
+  --font-family: 'Roboto', sans-serif;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-black: 900;
+
+  /* Transiciones */
+ --transition-fast: 0.2s ease;
+ --transition-base: 0.3s ease;
+ --transition-slow: 0.5s ease;
+} 
+
+/* Estilo general de body*/
+
+body {
+  font-family: 'Roboto', sans-serif
+}
+
+/* Header (barra superior fija) */
+
+header {
+  position: sticky;
+  top: 0;    
+  z-index: 1000;   
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  border-bottom: 1px solid var(--grey-dark);
+}
+
+/* Navegacion */
+
+nav ul {
+  display: flex;          
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center;   
+  gap: 15px;             
+  list-style: none;       
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 900px;              
+  margin: 2rem auto;             
+  padding: 0 20px;   
+}
+
+/* Imagen hero */
+
+.hero-img {
+  width: 100%;
+  border-radius: 20px;           
+  margin-bottom: 30px;
+}
+
+/* Logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.logo h1 {
+  font-weight: var(--font-black);
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.logo:hover h1 {
+  color: var(--primary);
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Animacion */
+
+@keyframes heartbeat {
+  0% {transform: scale(1); }
+  14% {transform: scale(1.1); }
+  28% {transform: scale(1); }
+  42% {transform: scale(1.1); }
+  70% {transform: scale(1); }
+  100% {transform: scale(1); }
+}
+
+/* Tooltip */
+
+.tooltip {
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Placeholders input */
+
+input::placeholder {
+  color: var(--accent);
+  font-weight: var(--font-medium);
+  opacity: 0.4;
+}
+
+/* Compatibilidad navegadores */
+
+input::-webkit-input-placeholder {
+  color: var(--success);
+}
+
+input:-ms-input-placeholder {
+  color: var(--success);
+}
+
+/* Botones formulario */
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+button[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  border: 1px solid var(--grey-dark);
+  color: var(--grey-dark);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+/* Menu Hamburguesa */
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive movil */
+
+@media (max-width: 768px) {
+
+  /* oculta menú normal */
+  nav ul {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* muestra hamburguesa */
+  .menu-toggle {
+    display: block; 
+  }
+   /* permite que header se reorganice */
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 2rem 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
