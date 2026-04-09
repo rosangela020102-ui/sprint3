@@ -177,23 +177,7 @@ button:hover {
 
 /* Responsive movil */
 
-@media (max-width: 768px) {
 
-  /* oculta menú normal */
-  nav ul {
-    display: none; 
-    flex-direction: column;
-    gap: 10px;
-  }
-  /* muestra hamburguesa */
-  .menu-toggle {
-    display: block; 
-  }
-   /* permite que header se reorganice */
-  header {
-    flex-wrap: wrap;
-  }
-}
 
 /* Footer */
 
@@ -206,4 +190,43 @@ button:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* Cuando la pantalla sea de 768px o menos (móviles y tablets pequeñas) */
+@media (max-width: 768px) {
+
+    nav ul { flex-direction: column; }
+    main, section { width: 95%; }
+
+    .footer {
+        height: auto; 
+        padding: 1.5rem 1rem;
+    }
+
+    .footer a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Un menú horizontal, que se ponga en vertical */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Que las secciones ocupen todo el ancho y no tengan márgenes gigantes */
+    main, section {
+        width: 95%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    /* títulos un poco más pequeños para que no se corten */
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
 }
